@@ -1,0 +1,14 @@
+[Unit]
+Description=Telegram Bot
+After=network.target
+
+[Service]
+User=user_name
+Group=user_name
+
+WorkingDirectory=/home/user_name/delete_vip/
+Environment="PYTHONPATH=/home/user_name/delete_vip/"
+ExecStart=/home/user_name/delete_vip/venv/bin/python /home/user_name/delete_vip/delete.py
+
+[Install]
+WantedBy=multi-user.target
